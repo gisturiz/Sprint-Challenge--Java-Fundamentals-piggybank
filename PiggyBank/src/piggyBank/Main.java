@@ -26,7 +26,13 @@ public class Main
 
 		piggyBank.forEach((v) -> System.out.println(v.getAmount()));
 
-		//System.out.println("The piggy bank holds " + fp.format(myValue));
+		double myValue = 0.0;
+		for (AbstractMoney m : piggyBank)
+		{
+			myValue = myValue + m.getAmount();
+		}
+
+		System.out.println("The piggy bank holds " + fp.format(myValue));
 
 	}
 }
